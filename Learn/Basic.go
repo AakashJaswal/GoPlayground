@@ -16,8 +16,14 @@ func main() {
 	fmt.Println(var3)
 	fmt.Println(testFunc("Hello, World!"))
 
-	println("Calling function to print slice elements with index")
-	slice()
+	println("Calling function to append to and print slice elements with index")
+	slice_test := []string{"One", "Two", "Three"}
+	printSlice(slice_test)
+
+	println("Original did not change")
+	for idx, num := range slice_test {
+		println(idx, num)
+	}
 
 }
 

@@ -1,10 +1,10 @@
 package main
 
-func slice() {
+func printSlice(s []string) {
 
-	slice_test := []string{"One", "Two", "Three"}
+	s = append(s, "Four")
 
-	for idx, num := range slice_test {
+	for idx, num := range s {
 		println(idx, num)
 	}
 
