@@ -14,11 +14,14 @@ func main() {
 	fmt.Println(var1)
 	fmt.Println(var2)
 	fmt.Println(var3)
-	fmt.Println(test_func("Hello, World!"))
+	fmt.Println(testFunc("Hello, World!"))
+
+	println("Calling function to print slice elements with index")
+	slice()
+
 }
 
 // Functions
-func test_func(s string) string {
-
+func testFunc(s string) string {
 	return s
 }
