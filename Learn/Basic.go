@@ -14,6 +14,7 @@ func main() {
 	fmt.Println(var1)
 	fmt.Println(var2)
 	fmt.Println(var3)
+
 	fmt.Println(testFunc("Hello, World!"))
 
 	println("Calling function to append to and print slice elements with index")
@@ -24,6 +25,12 @@ func main() {
 	for idx, num := range slice_test {
 		println(idx, num)
 	}
+
+	fmt.Println("Calling receiver for type, which appends and prints")
+	num_test := num_type{"Type1"}
+	num_test.appendAndPrint()
+	fmt.Println("Calling receiver for type, which only prints")
+	num_test.print()
 
 }
 
