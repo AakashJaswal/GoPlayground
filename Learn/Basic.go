@@ -3,13 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	// Can declare below.
+	// Can declare line below.
 	var var1 string
-	var1 = "This is var1"
 
 	var var2 = "This is var2"
 
 	var3 := "This is var3"
+
+	var1 = "This is var1"
 
 	fmt.Println(var1)
 	fmt.Println(var2)
