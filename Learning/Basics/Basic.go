@@ -19,6 +19,7 @@ func main() {
 	fmt.Println(testFunc("Hello, World!"))
 
 	println("Calling function to append to and print slice elements with index")
+	// Declaring Slicd
 	slice_test := []string{"One", "Two", "Three"}
 	printSlice(slice_test)
 
@@ -32,6 +33,9 @@ func main() {
 	num_test.appendAndPrint()
 	fmt.Println("Calling receiver for type, which only prints")
 	num_test.print()
+
+	fmt.Println("Running loop")
+	loop()
 
 }
 

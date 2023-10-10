@@ -15,7 +15,15 @@ type student struct {
 
 func main() {
 
-	jim := student{basic: human{Name: "Jim", Age: 34, Gender: "M"}, GPA: 4.00}
+	jim := student{
+		basic: human{
+			Name:   "Jim",
+			Age:    34,
+			Gender: "M",
+		},
+
+		GPA: 4.00,
+	}
 
 	fmt.Println(jim)
 
