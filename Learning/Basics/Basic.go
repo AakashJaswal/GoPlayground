@@ -37,6 +37,8 @@ func main() {
 	fmt.Println("Running loop")
 	loop()
 
+	whileLoop()
+
 }
 
 // Functions

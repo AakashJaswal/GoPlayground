@@ -8,3 +8,12 @@ func loop() {
 	}
 
 }
+
+func whileLoop() {
+	idx := 1
+	// Support break and continue
+	for idx < 5 {
+		fmt.Println(idx)
+		idx++
+	}
+}
