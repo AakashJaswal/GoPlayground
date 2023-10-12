@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"time"
 )
 
 func main() {
@@ -19,8 +20,11 @@ func main() {
 		go getHttpStatus(link, c)
 
 	}
-	for i := 0; i < len(links); i++ {
-		<-c
+	for i := range c {
+		go func(i string) {
+			time.Sleep(2 * time.Second)
+			go getHttpStatus(i, c)
+		}(i)
 	}
 }
 
@@ -34,5 +38,6 @@ func getHttpStatus(l string, c chan string) {
 	}
 
 	fmt.Println(l + ": " + resp.Status)
-	c <- l + ": " + resp.Status
+	// c <- l + ": " + resp.Status
+	c <- l
 }
